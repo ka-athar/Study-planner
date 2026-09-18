@@ -1,0 +1,34 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // User Document & Subcollections
+    match /users/{userId} {
+      allow read, write: if request.auth != null 
+        || userId.matches('^user_.*') 
+        || userId.matches('^guest_.*');
+
+      match /{allSubcollections=**} {
+        allow read, write: if request.auth != null 
+          || userId.matches('^user_.*') 
+          || userId.matches('^guest_.*');
+      }
+    }
+
+    // 6-Digit Cross-Device Transfer & PIN Pairing
+    match /transferCodes/{code} {
+      allow read, write: if true;
+    }
+
+    // Study Groups & Collaborative Features
+    match /groups/{groupId} {
+      allow read, write: if true;
+
+      match /{allSubcollections=**} {
+        allow read, write: if true;
+      }
+    }
+  }
+}
+
+
+

@@ -1,0 +1,99 @@
+{
+  "entities": {
+    "users": {
+      "title": "Users",
+      "description": "User profiles and settings",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "subjects": { "type": "array", "items": { "type": "string" } },
+        "targetHoursPerDay": { "type": "number" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid"]
+    },
+    "syllabus": {
+      "title": "Syllabus Subjects",
+      "description": "Subjects, chapters, topics and subtopics for user",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "subjectName": { "type": "string" },
+        "chapters": { "type": "array" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["userId", "subjectName"]
+    },
+    "studySessions": {
+      "title": "Study Sessions",
+      "description": "Completed or recorded study timer sessions",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "date": { "type": "string" },
+        "startTime": { "type": "string" },
+        "endTime": { "type": "string" },
+        "durationMinutes": { "type": "number" },
+        "subjectName": { "type": "string" },
+        "chapterName": { "type": "string" },
+        "topicName": { "type": "string" },
+        "result": { "type": "string" },
+        "timestamp": { "type": "number" }
+      },
+      "required": ["userId", "subjectName", "durationMinutes"]
+    },
+    "plans": {
+      "title": "Study Plans",
+      "description": "AI generated study plans",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "date": { "type": "string" },
+        "type": { "type": "string" },
+        "topics": { "type": "array" },
+        "reasoning": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["userId", "date"]
+    },
+    "testResults": {
+      "title": "Test Results and Mistakes",
+      "description": "Recorded test scores, mistakes and weak concepts",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "testName": { "type": "string" },
+        "subjectName": { "type": "string" },
+        "score": { "type": "string" },
+        "mistakes": { "type": "string" },
+        "struggledTopics": { "type": "array" },
+        "analysis": { "type": "object" },
+        "date": { "type": "string" }
+      },
+      "required": ["userId", "subjectName"]
+    },
+    "studyGroups": {
+      "title": "Study Groups",
+      "description": "Collaborative study groups with shared syllabus progress and collective goals",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "groupCode": { "type": "string" },
+        "subjectFocus": { "type": "array", "items": { "type": "string" } },
+        "isPublic": { "type": "boolean" },
+        "createdBy": { "type": "string" },
+        "createdByName": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "members": { "type": "array" },
+        "goals": { "type": "array" },
+        "aiSuggestions": { "type": "array" },
+        "messages": { "type": "array" }
+      },
+      "required": ["name", "groupCode", "createdBy"]
+    }
+  }
+}

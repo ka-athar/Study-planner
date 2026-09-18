@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="128" fill="#6B705C"/>
+  <circle cx="256" cy="256" r="180" fill="#5A5F4E"/>
+  <!-- Open Book & Brain / Spark Icon -->
+  <path d="M160 336c24-16 56-24 96-24s72 8 96 24V192c-24-16-56-24-96-24s-72 8-96 24v144z" fill="#FAF8F5"/>
+  <path d="M256 168v144" stroke="#6B705C" stroke-width="12" stroke-linecap="round"/>
+  <!-- Glowing Sparkle / Star on top -->
+  <path d="M256 96l12 36 36 12-36 12-12 36-12-36-36-12 36-12 12-36z" fill="#DDBEA9"/>
+  <circle cx="340" cy="140" r="10" fill="#FFE8D6"/>
+  <circle cx="172" cy="140" r="10" fill="#FFE8D6"/>
+</svg>

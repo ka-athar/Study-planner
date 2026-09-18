@@ -1,0 +1,9 @@
+{
+  "name": "AI Personal Study Planner & Organizer",
+  "description": "Comprehensive academic study organizer featuring Knowledge Refurbishment closed-book audit, Marks Recovery Engine priority triage, Exam Auto-Forcing metacognitive diagnostics, Urdu & English bilingual localization, Gemini AI tutor, active recall, syllabus parser, and full offline/cloud synchronization.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
